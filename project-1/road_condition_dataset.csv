@@ -1,0 +1,121 @@
+record_id,city,road_segment,road_type,iri_m_per_km,pothole_count,crack_percentage,rutting_depth_mm,pavement_age_years,drainage_condition,traffic_volume_vpd,condition_category
+IND-RD-145,"Hyderabad, Telangana",Medchal Highway (NH-44) (Ch 02+700m),National Highway,5.4,6,18.8,12.2,6.2,Moderate,21864,Fair
+IND-RD-148,"Chennai, Tamil Nadu",GST Road (Guindy-Airport Link) (Ch 32+850m),National Highway,3.14,3,13.9,7.5,5.2,Moderate,20805,Fair
+IND-RD-105,"Pune, Maharashtra",Hinjewadi Phase 1 Spine Road (Ch 19+550m),Major District Road,2.75,0,2.9,1.1,1.2,Good,29983,Good
+IND-RD-156,"Jaipur, Rajasthan",Delhi-Jaipur Expressway (NH-48) (Ch 10+250m),National Highway,4.9,1,8.5,6.0,5.4,Good,33069,Fair
+IND-RD-127,"Hyderabad, Telangana",Inner Ring Road (Mehdipatnam) (Ch 34+550m),Urban Arterial,1.59,0,5.2,3.9,3.0,Good,11055,Good
+IND-RD-165,"Chennai, Tamil Nadu",Mount-Poonamallee High Road (Ch 42+550m),State Highway,8.31,13,20.0,14.2,7.7,Poor,21808,Poor
+IND-RD-174,"Ahmedabad, Gujarat",Sardar Patel Ring Road (Bopal) (Ch 64+700m),Ring Road Expressway,7.29,7,31.6,19.0,8.7,Poor,14021,Poor
+IND-RD-111,"Mumbai, Maharashtra",LBS Marg (Kurla Corridor) (Ch 10+550m),Urban Arterial,1.75,0,2.5,2.5,2.7,Good,31038,Good
+IND-RD-141,"Hyderabad, Telangana",Nehru Outer Ring Road (Gachibowli) (Ch 26+700m),Expressway,3.7,5,15.1,8.8,5.1,Moderate,25031,Fair
+IND-RD-208,"Pune, Maharashtra",Sinhagad Road Arterial (Ch 38+700m),Urban Arterial,9.19,21,38.4,32.5,13.7,Poor,5708,Very Poor
+IND-RD-119,"Delhi, NCR",Outer Ring Road (Nehru Place) (Ch 38+100m),Urban Arterial,2.25,0,3.8,3.0,2.2,Good,39470,Good
+IND-RD-163,"Chennai, Tamil Nadu",GST Road (Guindy-Airport Link) (Ch 54+850m),National Highway,7.19,6,33.2,19.5,6.1,Poor,28459,Poor
+IND-RD-112,"Mumbai, Maharashtra",Ghodbunder Road Bypass (Ch 36+100m),State Highway,1.83,1,5.8,4.2,1.2,Good,6706,Good
+IND-RD-137,"Delhi, NCR",GT Road (Karnal Bypass Section) (Ch 55+400m),National Highway,3.37,1,16.0,7.1,6.4,Moderate,26753,Fair
+IND-RD-190,"Nagpur, Maharashtra",Kamptee Road (Automotive Square) (Ch 38+550m),Urban Arterial,8.34,13,25.5,19.6,9.9,Poor,18417,Poor
+IND-RD-192,"Ahmedabad, Gujarat",132 Feet Ring Road (Helmet Circle) (Ch 27+850m),Urban Arterial,11.29,21,47.2,23.7,9.2,Poor,4828,Very Poor
+IND-RD-210,"Pune, Maharashtra",Hinjewadi Phase 1 Spine Road (Ch 03+250m),Major District Road,10.4,18,45.9,23.4,11.2,Poor,4990,Very Poor
+IND-RD-101,"Pune, Maharashtra",NH-48 Katraj Bypass (Ch 40+550m),National Highway,2.77,0,4.3,1.7,1.0,Good,22523,Good
+IND-RD-189,"Nagpur, Maharashtra",Hingna Industrial Road (Ch 31+400m),Major District Road,5.8,13,22.1,19.0,6.2,Poor,21947,Poor
+IND-RD-205,"Nagpur, Maharashtra",Kamptee Road (Automotive Square) (Ch 41+850m),Urban Arterial,9.43,16,57.3,22.5,12.0,Poor,20368,Very Poor
+IND-RD-166,"Chennai, Tamil Nadu",Ennore Port Cargo Expressway (Ch 14+850m),Heavy Industrial Corridor,5.76,13,33.7,17.7,8.7,Poor,23755,Poor
+IND-RD-146,"Chennai, Tamil Nadu",Rajiv Gandhi Salai (OMR IT Expressway) (Ch 05+250m),Express Highway,3.16,3,15.7,9.6,4.9,Good,10552,Fair
+IND-RD-132,"Bengaluru, Karnataka",Kan设定 Road (MDR-4) (Ch 19+100m),Major District Road,3.95,2,17.1,5.9,3.6,Moderate,23570,Fair
+IND-RD-171,"Jaipur, Rajasthan",Delhi-Jaipur Expressway (NH-48) (Ch 11+250m),National Highway,6.61,11,26.3,13.0,10.3,Poor,26449,Poor
+IND-RD-143,"Hyderabad, Telangana",Uppal-Warangal Highway Section (Ch 53+700m),National Highway,4.12,2,15.4,10.3,4.1,Moderate,9952,Fair
+IND-RD-113,"Bengaluru, Karnataka",Electronic City Elevated Corridor (Ch 16+250m),Elevated Expressway,1.24,0,0.7,3.9,1.4,Good,24641,Good
+IND-RD-116,"Bengaluru, Karnataka",Bellary Road (Airport Corridor) (Ch 02+100m),Express Highway,2.27,0,2.7,2.4,1.0,Good,10248,Good
+IND-RD-215,"Mumbai, Maharashtra",SV Road (Bandra Section) (Ch 31+850m),Urban Arterial,11.5,21,39.7,31.7,14.2,Poor,13093,Very Poor
+IND-RD-177,"Ahmedabad, Gujarat",132 Feet Ring Road (Helmet Circle) (Ch 61+550m),Urban Arterial,6.84,7,28.8,14.7,6.8,Poor,16734,Poor
+IND-RD-198,"Lucknow, Uttar Pradesh",Hardoi Bypass Road (Ch 27+850m),State Highway,9.93,24,49.0,29.4,11.2,Poor,14954,Very Poor
+IND-RD-125,"Hyderabad, Telangana",PVNR Elevated Expressway (Ch 17+400m),Elevated Expressway,2.61,0,6.1,4.8,3.3,Good,9057,Good
+IND-RD-179,"Lucknow, Uttar Pradesh",Amar Shaheed Path (Gomti Nagar) (Ch 04+400m),Express Highway,7.42,7,28.5,13.7,9.7,Moderate,9277,Poor
+IND-RD-123,"Delhi, NCR",Ring Road (Moti Bagh Corridor) (Ch 29+100m),Urban Arterial,1.39,1,6.0,2.2,2.5,Good,22871,Good
+IND-RD-197,"Lucknow, Uttar Pradesh",Ring Road (Munshipulia Corridor) (Ch 09+400m),Urban Arterial,11.61,28,53.9,31.2,9.6,Poor,3077,Very Poor
+IND-RD-157,"Jaipur, Rajasthan",Agra Road (Ghat Ki Guni Link) (Ch 28+250m),Major District Road,3.42,5,8.4,11.4,4.2,Moderate,14191,Fair
+IND-RD-211,"Pune, Maharashtra",Hadapsar-Solapur Road (Ch 53+850m),State Highway,8.68,14,43.8,28.0,12.3,Poor,30696,Very Poor
+IND-RD-131,"Bengaluru, Karnataka",Bellary Road (Airport Corridor) (Ch 54+400m),Express Highway,5.21,4,10.5,7.8,5.9,Moderate,30203,Fair
+IND-RD-154,"Jaipur, Rajasthan",Ajmer Road 200ft Bypass (Ch 06+400m),National Highway,4.4,4,14.4,10.0,5.7,Moderate,24040,Fair
+IND-RD-219,"Bengaluru, Karnataka",Outer Ring Road (Marathahalli) (Ch 49+250m),Urban Arterial,8.6,14,40.3,20.8,9.6,Poor,34419,Very Poor
+IND-RD-110,"Mumbai, Maharashtra",SV Road (Bandra Section) (Ch 09+400m),Urban Arterial,1.53,0,5.5,3.7,3.3,Good,29162,Good
+IND-RD-134,"Delhi, NCR",Outer Ring Road (Nehru Place) (Ch 43+250m),Urban Arterial,4.84,1,13.8,6.0,2.8,Moderate,34191,Fair
+IND-RD-126,"Hyderabad, Telangana",Nehru Outer Ring Road (Gachibowli) (Ch 26+400m),Expressway,2.81,0,2.4,3.2,1.8,Moderate,35143,Good
+IND-RD-170,"Jaipur, Rajasthan",Sikar Road Industrial Link (Ch 49+850m),State Highway,7.49,11,34.5,19.8,8.4,Poor,15416,Poor
+IND-RD-129,"Hyderabad, Telangana",Banjara Hills Road No. 12 (Ch 35+700m),Urban Arterial,2.03,0,3.6,1.9,2.7,Good,14708,Good
+IND-RD-199,"Lucknow, Uttar Pradesh",Sultanpur Road (Arjunganj Section) (Ch 62+850m),Major District Road,10.63,14,40.8,32.2,10.8,Poor,29727,Very Poor
+IND-RD-186,"Nagpur, Maharashtra",Amravati Road (Wadi Bypass) (Ch 21+100m),National Highway,7.45,8,29.2,15.7,8.5,Poor,17410,Poor
+IND-RD-106,"Pune, Maharashtra",Hadapsar-Solapur Road (Ch 08+550m),State Highway,2.02,0,6.2,2.2,2.5,Good,18153,Good
+IND-RD-191,"Ahmedabad, Gujarat",Sanand Industrial Expressway (Ch 57+850m),Heavy Industrial Road,11.12,14,52.0,27.5,11.4,Poor,9469,Very Poor
+IND-RD-169,"Jaipur, Rajasthan",Ajmer Road 200ft Bypass (Ch 64+100m),National Highway,5.6,5,18.2,11.5,5.8,Moderate,4904,Poor
+IND-RD-140,"Hyderabad, Telangana",PVNR Elevated Expressway (Ch 64+100m),Elevated Expressway,4.58,1,9.3,6.4,3.7,Moderate,22443,Fair
+IND-RD-150,"Chennai, Tamil Nadu",Mount-Poonamallee High Road (Ch 37+100m),State Highway,4.83,1,13.1,8.0,4.9,Moderate,23006,Fair
+IND-RD-136,"Delhi, NCR",Mathura Road (Badarpur Link) (Ch 23+400m),National Highway,4.1,5,16.1,10.7,3.7,Good,25738,Fair
+IND-RD-117,"Bengaluru, Karnataka",Kan设定 Road (MDR-4) (Ch 34+400m),Major District Road,1.64,0,1.6,2.0,2.2,Good,24175,Good
+IND-RD-167,"Jaipur, Rajasthan",Tonk Road (Airport Corridor) (Ch 31+250m),Urban Arterial,7.09,11,19.9,14.9,9.6,Poor,19012,Poor
+IND-RD-135,"Delhi, NCR",Delhi-Noida Direct (DND) Flyway (Ch 02+850m),Expressway,4.81,4,16.6,5.7,4.9,Moderate,32058,Fair
+IND-RD-214,"Mumbai, Maharashtra",Sion-Panvel Expressway Link (Ch 30+850m),Major Arterial,11.77,18,37.0,30.6,11.2,Poor,29737,Very Poor
+IND-RD-108,"Mumbai, Maharashtra",Eastern Express Highway (Ghatkopar) (Ch 49+850m),Express Highway,1.52,0,2.5,2.7,1.3,Good,18685,Good
+IND-RD-144,"Hyderabad, Telangana",Banjara Hills Road No. 12 (Ch 24+250m),Urban Arterial,4.42,5,16.6,7.1,2.9,Poor,15323,Fair
+IND-RD-173,"Ahmedabad, Gujarat",SG Highway (Bodakdev Corridor) (Ch 04+400m),Urban Arterial,6.41,6,27.8,16.4,9.9,Poor,25603,Poor
+IND-RD-168,"Jaipur, Rajasthan",JLN Marg (Malviya Nagar) (Ch 12+700m),Urban Arterial,7.65,6,34.0,18.6,9.7,Poor,11766,Poor
+IND-RD-184,"Lucknow, Uttar Pradesh",Sultanpur Road (Arjunganj Section) (Ch 04+850m),Major District Road,7.65,9,21.1,15.5,8.3,Moderate,12652,Poor
+IND-RD-128,"Hyderabad, Telangana",Uppal-Warangal Highway Section (Ch 60+400m),National Highway,2.25,0,4.2,5.4,2.0,Moderate,37246,Good
+IND-RD-120,"Delhi, NCR",Delhi-Noida Direct (DND) Flyway (Ch 57+400m),Expressway,1.6,0,3.5,5.4,1.7,Good,29171,Good
+IND-RD-196,"Lucknow, Uttar Pradesh",Faizabad Road (Polytechnic Link) (Ch 57+400m),National Highway,12.16,21,44.2,32.5,12.8,Poor,24852,Very Poor
+IND-RD-201,"Nagpur, Maharashtra",Amravati Road (Wadi Bypass) (Ch 34+550m),National Highway,11.4,18,53.6,22.5,10.4,Poor,20334,Very Poor
+IND-RD-109,"Mumbai, Maharashtra",Sion-Panvel Expressway Link (Ch 26+550m),Major Arterial,2.2,0,2.4,1.7,0.5,Good,8527,Good
+IND-RD-114,"Bengaluru, Karnataka",Outer Ring Road (Marathahalli) (Ch 38+700m),Urban Arterial,2.09,0,6.4,3.7,2.6,Moderate,9193,Good
+IND-RD-185,"Nagpur, Maharashtra",Wardha Road (MIHAN Transit Corridor) (Ch 56+700m),National Highway,6.06,6,32.1,12.7,8.3,Moderate,8096,Poor
+IND-RD-104,"Pune, Maharashtra",Nagar Road BRTS Corridor (Ch 63+850m),Urban Arterial,1.53,0,4.2,1.2,2.3,Good,21002,Good
+IND-RD-118,"Bengaluru, Karnataka",Old Madras Road (K.R. Puram) (Ch 63+250m),State Highway,2.38,0,6.8,2.2,3.4,Good,7354,Good
+IND-RD-139,"Delhi, NCR",Mehrauli-Gurgaon Road (Ch 20+100m),State Highway,3.96,3,12.0,6.0,2.9,Poor,24722,Fair
+IND-RD-218,"Bengaluru, Karnataka",Electronic City Elevated Corridor (Ch 33+850m),Elevated Expressway,10.87,28,54.6,25.7,12.5,Poor,3822,Very Poor
+IND-RD-107,"Mumbai, Maharashtra",Western Express Highway (Andheri) (Ch 55+250m),Express Highway,2.14,0,5.8,3.0,1.7,Moderate,39106,Good
+IND-RD-178,"Ahmedabad, Gujarat",Narol-Naroda Road (NH-48) (Ch 52+100m),National Highway,6.84,8,21.6,17.0,6.7,Moderate,22771,Poor
+IND-RD-212,"Mumbai, Maharashtra",Western Express Highway (Andheri) (Ch 08+100m),Express Highway,12.25,14,48.3,31.7,11.7,Poor,23806,Very Poor
+IND-RD-195,"Lucknow, Uttar Pradesh",Kanpur Road (Amausi Airport Link) (Ch 25+850m),National Highway,10.14,28,38.0,31.6,13.0,Poor,4908,Very Poor
+IND-RD-155,"Jaipur, Rajasthan",Sikar Road Industrial Link (Ch 54+250m),State Highway,5.19,2,12.0,10.8,4.1,Good,12231,Fair
+IND-RD-151,"Chennai, Tamil Nadu",Ennore Port Cargo Expressway (Ch 49+550m),Heavy Industrial Corridor,3.9,5,10.0,9.6,5.5,Moderate,27801,Fair
+IND-RD-181,"Lucknow, Uttar Pradesh",Faizabad Road (Polytechnic Link) (Ch 46+400m),National Highway,5.66,6,26.7,17.4,8.2,Moderate,25027,Poor
+IND-RD-147,"Chennai, Tamil Nadu",Chennai Outer Ring Road (Vandalur) (Ch 52+400m),Expressway,5.12,3,16.0,9.4,3.6,Moderate,25991,Fair
+IND-RD-182,"Lucknow, Uttar Pradesh",Ring Road (Munshipulia Corridor) (Ch 62+100m),Urban Arterial,6.33,6,20.8,16.7,10.4,Poor,4555,Poor
+IND-RD-162,"Chennai, Tamil Nadu",Chennai Outer Ring Road (Vandalur) (Ch 38+550m),Expressway,7.1,9,20.6,13.3,6.8,Moderate,24468,Poor
+IND-RD-217,"Mumbai, Maharashtra",Ghodbunder Road Bypass (Ch 60+700m),State Highway,10.84,14,53.9,22.8,12.4,Poor,10970,Very Poor
+IND-RD-180,"Lucknow, Uttar Pradesh",Kanpur Road (Amausi Airport Link) (Ch 62+850m),National Highway,5.8,6,27.5,14.8,10.0,Moderate,30829,Poor
+IND-RD-194,"Lucknow, Uttar Pradesh",Amar Shaheed Path (Gomti Nagar) (Ch 11+550m),Express Highway,9.33,16,37.5,22.3,8.5,Poor,30534,Very Poor
+IND-RD-142,"Hyderabad, Telangana",Inner Ring Road (Mehdipatnam) (Ch 27+400m),Urban Arterial,4.73,1,11.0,6.1,3.1,Moderate,18745,Fair
+IND-RD-159,"Ahmedabad, Gujarat",Sardar Patel Ring Road (Bopal) (Ch 11+250m),Ring Road Expressway,3.81,3,10.1,7.9,4.9,Moderate,30531,Fair
+IND-RD-149,"Chennai, Tamil Nadu",Anna Salai (Central Arterial) (Ch 27+850m),Urban Arterial,4.85,1,12.6,9.7,4.1,Poor,13043,Fair
+IND-RD-202,"Nagpur, Maharashtra",Outer Ring Road (Narendra Nagar) (Ch 34+850m),Expressway,9.34,16,53.0,31.9,10.6,Poor,26710,Very Poor
+IND-RD-158,"Ahmedabad, Gujarat",SG Highway (Bodakdev Corridor) (Ch 18+100m),Urban Arterial,4.37,4,11.4,6.0,5.7,Moderate,26070,Fair
+IND-RD-176,"Ahmedabad, Gujarat",Sanand Industrial Expressway (Ch 61+850m),Heavy Industrial Road,7.29,8,30.0,18.2,8.0,Poor,23716,Poor
+IND-RD-133,"Bengaluru, Karnataka",Old Madras Road (K.R. Puram) (Ch 03+400m),State Highway,3.73,2,15.1,9.7,5.4,Moderate,27480,Fair
+IND-RD-213,"Mumbai, Maharashtra",Eastern Express Highway (Ghatkopar) (Ch 02+700m),Express Highway,10.08,18,40.3,32.2,9.7,Poor,23908,Very Poor
+IND-RD-160,"Ahmedabad, Gujarat",Ashram Road (Sabarmati Corridor) (Ch 62+100m),City Arterial,4.7,3,13.5,11.3,4.2,Moderate,6323,Fair
+IND-RD-164,"Chennai, Tamil Nadu",Anna Salai (Central Arterial) (Ch 29+700m),Urban Arterial,6.33,9,29.2,15.0,6.9,Moderate,9464,Poor
+IND-RD-206,"Pune, Maharashtra",NH-48 Katraj Bypass (Ch 34+550m),National Highway,10.83,21,48.5,29.6,14.0,Poor,30632,Very Poor
+IND-RD-138,"Delhi, NCR",Ring Road (Moti Bagh Corridor) (Ch 46+550m),Urban Arterial,3.98,3,14.1,9.9,6.4,Moderate,23577,Fair
+IND-RD-130,"Hyderabad, Telangana",Medchal Highway (NH-44) (Ch 45+550m),National Highway,1.98,0,6.1,4.4,3.4,Good,6801,Good
+IND-RD-216,"Mumbai, Maharashtra",LBS Marg (Kurla Corridor) (Ch 35+550m),Urban Arterial,11.63,21,54.8,31.8,10.9,Poor,33678,Very Poor
+IND-RD-102,"Pune, Maharashtra",Mumbai-Pune Expressway Link (Ch 04+850m),Expressway,1.29,0,6.4,1.0,3.5,Good,26269,Good
+IND-RD-153,"Jaipur, Rajasthan",JLN Marg (Malviya Nagar) (Ch 20+550m),Urban Arterial,3.86,4,17.3,11.2,4.9,Moderate,26864,Fair
+IND-RD-122,"Delhi, NCR",GT Road (Karnal Bypass Section) (Ch 64+400m),National Highway,1.78,0,6.4,2.8,2.1,Good,8302,Good
+IND-RD-103,"Pune, Maharashtra",Sinhagad Road Arterial (Ch 23+700m),Urban Arterial,1.91,0,4.4,1.6,1.4,Good,6689,Good
+IND-RD-124,"Delhi, NCR",Mehrauli-Gurgaon Road (Ch 61+100m),State Highway,1.6,0,6.2,5.1,2.4,Good,21651,Good
+IND-RD-204,"Nagpur, Maharashtra",Hingna Industrial Road (Ch 03+400m),Major District Road,11.02,18,48.5,29.8,12.1,Poor,17153,Very Poor
+IND-RD-200,"Nagpur, Maharashtra",Wardha Road (MIHAN Transit Corridor) (Ch 52+400m),National Highway,10.21,18,49.9,24.9,9.3,Poor,8788,Very Poor
+IND-RD-188,"Nagpur, Maharashtra",Bhandara Road (NH-53 Link) (Ch 60+700m),National Highway,6.47,6,23.1,12.8,6.5,Moderate,31639,Poor
+IND-RD-209,"Pune, Maharashtra",Nagar Road BRTS Corridor (Ch 48+100m),Urban Arterial,11.42,16,54.0,20.6,10.5,Poor,10973,Very Poor
+IND-RD-175,"Ahmedabad, Gujarat",Ashram Road (Sabarmati Corridor) (Ch 35+250m),City Arterial,6.65,8,20.9,17.7,8.4,Poor,14050,Poor
+IND-RD-187,"Nagpur, Maharashtra",Outer Ring Road (Narendra Nagar) (Ch 09+100m),Expressway,7.13,7,23.8,14.8,8.8,Poor,14667,Poor
+IND-RD-183,"Lucknow, Uttar Pradesh",Hardoi Bypass Road (Ch 23+850m),State Highway,7.28,13,26.4,17.8,6.0,Moderate,9626,Poor
+IND-RD-220,"Bengaluru, Karnataka",Hosur Road (Silk Board Link) (Ch 19+250m),National Highway,12.06,24,43.4,23.9,10.8,Poor,17596,Very Poor
+IND-RD-121,"Delhi, NCR",Mathura Road (Badarpur Link) (Ch 34+100m),National Highway,1.73,0,0.8,3.7,2.5,Good,41254,Good
+IND-RD-161,"Chennai, Tamil Nadu",Rajiv Gandhi Salai (OMR IT Expressway) (Ch 34+850m),Express Highway,6.77,7,19.7,19.6,6.0,Poor,15503,Poor
+IND-RD-172,"Jaipur, Rajasthan",Agra Road (Ghat Ki Guni Link) (Ch 02+100m),Major District Road,7.67,7,24.9,12.9,9.0,Poor,14857,Poor
+IND-RD-207,"Pune, Maharashtra",Mumbai-Pune Expressway Link (Ch 29+250m),Expressway,8.82,18,52.4,32.6,14.1,Poor,14053,Very Poor
+IND-RD-115,"Bengaluru, Karnataka",Hosur Road (Silk Board Link) (Ch 29+550m),National Highway,1.56,0,6.1,2.5,0.9,Good,30276,Good
+IND-RD-193,"Ahmedabad, Gujarat",Narol-Naroda Road (NH-48) (Ch 63+400m),National Highway,12.14,24,47.7,21.2,10.5,Poor,25422,Very Poor
+IND-RD-152,"Jaipur, Rajasthan",Tonk Road (Airport Corridor) (Ch 18+100m),Urban Arterial,4.19,1,10.8,10.9,4.2,Good,12900,Fair
+IND-RD-203,"Nagpur, Maharashtra",Bhandara Road (NH-53 Link) (Ch 48+550m),National Highway,10.31,21,44.6,30.9,9.4,Poor,6756,Very Poor

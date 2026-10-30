@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" width="100%" height="100%">
+  <defs>
+    <linearGradient id="heroSky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#070c1a"/>
+      <stop offset="40%" stop-color="#0c1730"/>
+      <stop offset="100%" stop-color="#142347"/>
+    </linearGradient>
+    <linearGradient id="roadSurf" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#16223d"/>
+      <stop offset="100%" stop-color="#0a101f"/>
+    </linearGradient>
+    <linearGradient id="glowYellow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#fbbf24" stop-opacity="0.4"/>
+    </linearGradient>
+    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.7" opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="650" fill="url(#heroSky)"/>
+  <rect width="1200" height="650" fill="url(#gridPattern)"/>
+
+  <!-- Distant Tech Mountains / Highway Landscape -->
+  <path d="M0,340 Q300,280 600,320 T1200,300 L1200,650 L0,650 Z" fill="#0f192e" opacity="0.7"/>
+
+  <!-- Modern Express Highway Perspective -->
+  <polygon points="540,320 660,320 1150,650 50,650" fill="url(#roadSurf)"/>
+
+  <!-- Pavement Grid / Laser Inspection Scanning Mesh -->
+  <polygon points="540,320 660,320 1150,650 50,650" fill="none" stroke="#38bdf8" stroke-width="0.5" opacity="0.15"/>
+  <line x1="560" y1="320" x2="250" y2="650" stroke="#38bdf8" stroke-width="0.8" opacity="0.2"/>
+  <line x1="580" y1="320" x2="450" y2="650" stroke="#38bdf8" stroke-width="0.8" opacity="0.2"/>
+  <line x1="620" y1="320" x2="750" y2="650" stroke="#38bdf8" stroke-width="0.8" opacity="0.2"/>
+  <line x1="640" y1="320" x2="950" y2="650" stroke="#38bdf8" stroke-width="0.8" opacity="0.2"/>
+
+  <!-- Horizontal Laser Scan Line (AI Scanning Simulation) -->
+  <line x1="320" y1="460" x2="880" y2="460" stroke="#00f5ff" stroke-width="2.5" opacity="0.85"/>
+  <line x1="280" y1="460" x2="920" y2="460" stroke="#38bdf8" stroke-width="6" opacity="0.2" filter="blur(3px)"/>
+
+  <!-- Scanning Target Box / Inspection Node -->
+  <rect x="520" y="440" width="160" height="40" rx="4" fill="#0369a1" fill-opacity="0.35" stroke="#38bdf8" stroke-width="1.5"/>
+  <text x="600" y="465" fill="#38bdf8" font-family="monospace" font-size="12" font-weight="bold" text-anchor="middle">SCANNING PAVEMENT: IRI 2.4</text>
+
+  <!-- Side Shoulder Markings -->
+  <polygon points="542,320 548,320 78,650 62,650" fill="#ffffff" opacity="0.85"/>
+  <polygon points="652,320 658,320 1138,650 1122,650" fill="#ffffff" opacity="0.85"/>
+
+  <!-- Glowing Yellow Highway Centerline (Road Inspired) -->
+  <polygon points="597,325 603,325 604,355 596,355" fill="url(#glowYellow)"/>
+  <polygon points="595,380 605,380 607,430 593,430" fill="url(#glowYellow)"/>
+  <polygon points="592,460 608,460 612,530 588,530" fill="url(#glowYellow)"/>
+  <polygon points="586,565 614,565 620,650 580,650" fill="url(#glowYellow)"/>
+
+  <!-- HUD Coordinates & Engineering telemetry -->
+  <text x="40" y="50" fill="#64748b" font-family="monospace" font-size="12">STATION: CH 14+250m | ROAD ASSET: NH-48 EXP</text>
+  <text x="40" y="70" fill="#38bdf8" font-family="monospace" font-size="11">MODEL: RANDOM FOREST CLASSIFIER (100 TREES)</text>
+  <text x="1160" y="50" fill="#10b981" font-family="monospace" font-size="12" text-anchor="end">STATUS: REAL-TIME AI ACTIVE</text>
+  <text x="1160" y="70" fill="#94a3b8" font-family="monospace" font-size="11" text-anchor="end">IRC:82-2015 COMPLIANT</text>
+</svg>

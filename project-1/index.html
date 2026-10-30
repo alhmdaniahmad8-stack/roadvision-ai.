@@ -1,0 +1,1502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RoadVision AI – Intelligent Road Condition Classification System for Indian Roads</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Academic Notification Banner -->
+  <div class="academic-banner">
+    <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap;">
+      <span class="academic-badge"><i class="fas fa-graduation-cap"></i> AIML MINI PROJECT</span>
+      <span>Department of Civil Engineering | Subject: Artificial Intelligence & Machine Learning (10 Marks)</span>
+      <span style="color: var(--road-yellow-bright); font-weight: 700;">[CO3 & CO4 Compliant]</span>
+    </div>
+    <div class="academic-links">
+      <a href="#vivaModal" id="btn-open-viva-modal"><i class="fas fa-chalkboard-teacher"></i> 5-Min Viva Guide</a>
+      <a href="#reportModal" id="btn-open-report-modal"><i class="fas fa-file-alt"></i> View Academic Report</a>
+      <a href="#about-project"><i class="fas fa-users"></i> Team Credits</a>
+    </div>
+  </div>
+
+  <!-- Navigation Bar: Home | Dashboard | Classification | Dataset | ML Model | Evaluation | Applications | About Project -->
+  <nav class="navbar">
+    <a href="#home" class="nav-brand">
+      <div class="brand-icon">
+        <i class="fas fa-road"></i>
+      </div>
+      <div>
+        <div class="brand-title">RoadVision <span>AI</span></div>
+        <div class="brand-subtitle">SMARTER ROADS. SAFER JOURNEYS.</div>
+      </div>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#dashboard">Dashboard</a></li>
+      <li><a href="#classification">Classification</a></li>
+      <li><a href="#dataset">Dataset</a></li>
+      <li><a href="#ml-model">ML Model</a></li>
+      <li><a href="#evaluation">Evaluation</a></li>
+      <li><a href="#applications">Applications</a></li>
+      <li><a href="#about-project">About Project</a></li>
+      <li><a href="#classification" class="nav-cta"><i class="fas fa-bolt"></i> Test Model</a></li>
+    </ul>
+
+    <button class="mobile-toggle" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+  </nav>
+
+  <!-- Yellow Road Lane Divider -->
+  <div class="road-divider"></div>
+
+  <!-- =========================================================
+       1. HOME PAGE & HERO SECTION
+       ========================================================= -->
+  <section id="home" class="hero-section">
+    <div class="hero-backdrop"></div>
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="section-tag">
+            <i class="fas fa-map-marker-alt"></i> Indian Highway & Urban Road Pavement Intelligence
+          </div>
+          <h1 style="font-size: 2.75rem; line-height: 1.2;">Understanding India's Roads Through <span class="highlight">Artificial Intelligence.</span></h1>
+          <p class="lead">
+            An intelligent Machine Learning system designed to analyze pavement conditions, classify road quality and support better road maintenance decisions across Indian National Highways, State Highways, and Urban Municipal Networks.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#classification" class="btn btn-primary">
+              <i class="fas fa-sliders-h"></i> Start Classification
+            </a>
+            <a href="#dashboard" class="btn btn-secondary">
+              <i class="fas fa-chart-line"></i> Explore Dashboard
+            </a>
+            <a href="#dataset" class="btn btn-outline">
+              <i class="fas fa-database"></i> Explore Dataset (120 Records)
+            </a>
+          </div>
+
+          <div style="font-size: 0.8rem; color: var(--text-muted); display: flex; align-items: center; gap: 8px;">
+            <i class="fas fa-book-open" style="color: var(--road-yellow);"></i>
+            <span>Complies with Indian Roads Congress <strong>IRC:82-2015</strong>, <strong>IRC:SP:16</strong>, and <strong>MoRTH</strong> specifications.</span>
+          </div>
+        </div>
+
+        <!-- Telemetry Card (Indian Road Inspection) -->
+        <div class="hero-telemetry-card">
+          <div class="telemetry-header">
+            <div class="telemetry-title">
+              <i class="fas fa-satellite-dish" style="color: var(--road-yellow);"></i> Field Inspection Scanner — India
+            </div>
+            <div class="telemetry-status">
+              <span class="pulse-dot"></span> LIVE 100-TREE RF MODEL
+            </div>
+          </div>
+
+          <img src="assets/hero-road.svg" alt="Indian Highway Pavement Inspection" class="telemetry-preview-img">
+
+          <div class="telemetry-quick-stats">
+            <div class="telemetry-stat-box">
+              <div class="telemetry-stat-label">Model Algorithm</div>
+              <div class="telemetry-stat-val" style="font-size: 0.95rem; color: var(--road-yellow-bright);">Random Forest</div>
+            </div>
+            <div class="telemetry-stat-box">
+              <div class="telemetry-stat-label">Model Accuracy</div>
+              <div class="telemetry-stat-val" style="color: var(--indicator-good);">95.83%</div>
+            </div>
+            <div class="telemetry-stat-box">
+              <div class="telemetry-stat-label">Validation Split</div>
+              <div class="telemetry-stat-val">80% / 20%</div>
+            </div>
+            <div class="telemetry-stat-box">
+              <div class="telemetry-stat-label">Indian Cities</div>
+              <div class="telemetry-stat-val">10 Hubs</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 Statistics Cards (Actual Calculated Figures) -->
+      <div id="dashboard" class="stats-row" style="margin-top: 50px;">
+        <div class="stat-card">
+          <div class="stat-number">120</div>
+          <div class="stat-label">Total Road Records</div>
+          <div class="stat-desc">Usable segments across Pune, Mumbai, Bengaluru, Delhi, Hyderabad & more.</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number"><span>4</span> Tiers</div>
+          <div class="stat-label">Road Condition Categories</div>
+          <div class="stat-desc">Good (Green), Fair (Yellow), Poor (Orange), Very Poor (Red) per IRC:82.</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" style="color: var(--indicator-good);">95.83<span>%</span></div>
+          <div class="stat-label">Model Test Accuracy</div>
+          <div class="stat-desc">Empirically calculated on the unseen 20% test partition (24 samples).</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">7</div>
+          <div class="stat-label">Input Parameters</div>
+          <div class="stat-desc">IRI, Potholes, Cracking, Rutting, Age, Traffic Volume, and Drainage.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Objectives & Why Road Monitoring in India Matters -->
+  <section class="why-section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fas fa-bullseye"></i> Engineering Objectives</div>
+        <h2 class="section-title">Why Road Condition Monitoring is Critical in India</h2>
+        <p class="section-subtitle">
+          India possesses the world's second-largest road network (over 6.3 million km). Severe monsoon downpours, overloaded commercial vehicles, and delayed maintenance cause exponential pavement deterioration and tragic road fatalities.
+        </p>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-cloud-showers-heavy"></i></div>
+          <h3>Monsoon Water Damage Prevention</h3>
+          <p>Indian monsoons are notorious for pothole outbreaks. Standing stormwater penetrates unsealed surface cracks, saturating granular sub-bases and causing rapid pavement collapse.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-truck-moving"></i></div>
+          <h3>Commercial Overloading Defense</h3>
+          <p>Heavy commercial multi-axle freight trucks contribute high Equivalent Single Axle Loads (ESAL). Monitoring rutting depth prevents catastrophic wheelpath shearing.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-hand-holding-usd"></i></div>
+          <h3>Municipal Budget Optimization</h3>
+          <p>Proactive surface treatment (micro-surfacing) at "Fair" condition costs ₹280/m², whereas full reconstruction of "Very Poor" roads costs ₹2,400/m²—saving municipalities up to 40%.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i class="fas fa-heartbeat"></i></div>
+          <h3>Eliminating Pothole Accidents</h3>
+          <p>According to MoRTH accident reports, potholes cause thousands of avoidable fatalities yearly. Automated classification enables rapid emergency patching before fatal crashes occur.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       2. INDIAN ROAD CONDITION CLASSIFICATION (INTERACTIVE TOOL)
+       ========================================================= -->
+  <section id="classification">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fas fa-microchip"></i> Live Machine Learning Classifier</div>
+        <h2 class="section-title">Indian Road Condition Classification</h2>
+        <p class="section-subtitle">
+          Input road inspection parameters below. The browser runs the genuine <strong>100-tree Random Forest model</strong> trained in Python, computing real-time condition classification, confidence ratings, and IRC:82 maintenance actions.
+        </p>
+      </div>
+
+      <div class="classification-layout">
+        <!-- Interactive Form Card -->
+        <div class="classifier-form-card">
+          <div class="form-header-row">
+            <h3><i class="fas fa-clipboard-check" style="color: var(--road-yellow);"></i> Road Inspection Information</h3>
+            <span style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono);">IRC:82 / MoRTH UNITS</span>
+          </div>
+
+          <!-- Quick-Load Presets for Indian Road Types -->
+          <div class="preset-selector">
+            <div class="preset-title">
+              <i class="fas fa-magic"></i> Load Representative Indian Road Demonstration Presets:
+            </div>
+            <div class="preset-buttons">
+              <button type="button" class="preset-btn" data-preset="good">
+                <i class="fas fa-check" style="color:var(--indicator-good);"></i> NH-48 Express (Good)
+              </button>
+              <button type="button" class="preset-btn" data-preset="fair">
+                <i class="fas fa-exclamation" style="color:var(--indicator-fair);"></i> Mumbai WEH (Fair)
+              </button>
+              <button type="button" class="preset-btn" data-preset="poor">
+                <i class="fas fa-exclamation-triangle" style="color:var(--indicator-poor);"></i> Delhi Ring Rd (Poor)
+              </button>
+              <button type="button" class="preset-btn" data-preset="veryPoor">
+                <i class="fas fa-times" style="color:var(--indicator-very-poor);"></i> Nagpur Freight (V.Poor)
+              </button>
+            </div>
+          </div>
+
+          <form id="road-classifier-form">
+            <div class="input-grid">
+
+              <!-- 1. International Roughness Index (IRI) -->
+              <div class="input-group">
+                <div class="input-label-row">
+                  <label class="input-label" for="slider-iri">
+                    <i class="fas fa-wave-square" style="color: var(--road-yellow);"></i> 1. International Roughness Index (IRI)
+                  </label>
+                  <span class="input-unit">m/km [World Bank / IRC:SP:16]</span>
+                </div>
+                <div class="input-controls">
+                  <input type="range" id="slider-iri" min="1.0" max="12.0" step="0.1" value="2.4">
+                  <input type="number" id="num-iri" class="num-input" min="1.0" max="12.0" step="0.1" value="2.4">
+                </div>
+              </div>
+
+              <!-- 2. Pothole Count -->
+              <div class="input-group">
+                <div class="input-label-row">
+                  <label class="input-label" for="slider-potholes">
+                    <i class="fas fa-circle-notch" style="color: var(--road-yellow);"></i> 2. Pothole Count
+                  </label>
+                  <span class="input-unit">count / 500m segment</span>
+                </div>
+                <div class="input-controls">
+                  <input type="range" id="slider-potholes" min="0" max="30" step="1" value="1">
+                  <input type="number" id="num-potholes" class="num-input" min="0" max="30" step="1" value="1">
+                </div>
+              </div>
+
+              <!-- 3. Crack Percentage -->
+              <div class="input-group">
+                <div class="input-label-row">
+                  <label class="input-label" for="slider-cracks">
+                    <i class="fas fa-project-diagram" style="color: var(--road-yellow);"></i> 3. Crack Percentage
+                  </label>
+                  <span class="input-unit">% damaged surface area</span>
+                </div>
+                <div class="input-controls">
+                  <input type="range" id="slider-cracks" min="0.0" max="60.0" step="0.5" value="4.5">
+                  <input type="number" id="num-cracks" class="num-input" min="0.0" max="60.0" step="0.5" value="4.5">
+                </div>
+              </div>
+
+              <!-- 4. Rutting Depth -->
+              <div class="input-group">
+                <div class="input-label-row">
+                  <label class="input-label" for="slider-rutting">
+                    <i class="fas fa-arrows-alt-v" style="color: var(--road-yellow);"></i> 4. Rutting Depth
+                  </label>
+                  <span class="input-unit">mm under 3m straight-edge</span>
+                </div>
+                <div class="input-controls">
+                  <input type="range" id="slider-rutting" min="0.0" max="35.0" step="0.5" value="3.2">
+                  <input type="number" id="num-rutting" class="num-input" min="0.0" max="35.0" step="0.5" value="3.2">
+                </div>
+              </div>
+
+              <!-- 5. Pavement Surface Age -->
+              <div class="input-group">
+                <div class="input-label-row">
+                  <label class="input-label" for="slider-age">
+                    <i class="fas fa-calendar-alt" style="color: var(--road-yellow);"></i> 5. Pavement Surface Age
+                  </label>
+                  <span class="input-unit">years since last overlay</span>
+                </div>
+                <div class="input-controls">
+                  <input type="range" id="slider-age" min="0.5" max="15.0" step="0.5" value="2.0">
+                  <input type="number" id="num-age" class="num-input" min="0.5" max="15.0" step="0.5" value="2.0">
+                </div>
+              </div>
+
+              <!-- 6. Traffic Volume -->
+              <div class="input-group">
+                <div class="input-label-row">
+                  <label class="input-label" for="slider-traffic">
+                    <i class="fas fa-truck" style="color: var(--road-yellow);"></i> 6. Traffic Volume (AADT)
+                  </label>
+                  <span class="input-unit">vehicles / day (vpd)</span>
+                </div>
+                <div class="input-controls">
+                  <input type="range" id="slider-traffic" min="1000" max="45000" step="500" value="16500">
+                  <input type="number" id="num-traffic" class="num-input" min="1000" max="45000" step="500" value="16500">
+                </div>
+              </div>
+
+              <!-- 7. Drainage Condition -->
+              <div class="input-group">
+                <div class="input-label-row">
+                  <label class="input-label" for="select-drainage">
+                    <i class="fas fa-tint" style="color: var(--road-yellow);"></i> 7. Drainage Condition
+                  </label>
+                  <span class="input-unit">side storm drains & cross-fall</span>
+                </div>
+                <select id="select-drainage" class="select-input">
+                  <option value="Good" selected>Good — Clean side drains, unblocked culverts, clear camber</option>
+                  <option value="Moderate">Moderate — Partial siltation, minor shoulder water pooling</option>
+                  <option value="Poor">Poor — Completely choked drains, standing water on bitumen</option>
+                </select>
+              </div>
+
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" id="btn-classify" class="btn btn-primary">
+                <i class="fas fa-calculator"></i> Analyze Road Condition
+              </button>
+              <button type="button" id="btn-reset-form" class="btn btn-secondary">
+                <i class="fas fa-undo"></i> Reset Inputs
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Output Prediction Result Card -->
+        <div class="classifier-result-card">
+          <div id="result-empty-state" class="result-empty-state">
+            <div class="result-empty-icon"><i class="fas fa-road"></i></div>
+            <h3>Ready for Inspection Data</h3>
+            <p style="font-size: 0.88rem; margin-top: 8px;">
+              Enter Indian road parameters or choose a preset scenario, then click <strong>"Analyze Road Condition"</strong>.
+            </p>
+          </div>
+
+          <!-- Active Prediction Results -->
+          <div id="result-content" class="result-content">
+            <div class="result-badge-container">
+              <div>
+                <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 700; text-transform: uppercase;">PREDICTED ROAD CONDITION</div>
+                <div id="res-condition-pill" class="condition-pill good">
+                  <i class="fas fa-check-circle"></i> Good
+                </div>
+              </div>
+              <div class="confidence-rate">
+                <div class="lbl">MODEL CONFIDENCE</div>
+                <div id="res-confidence-val" class="val">98.4%</div>
+              </div>
+            </div>
+
+            <!-- Visual Condition Score (Health Index) -->
+            <div class="health-meter-box">
+              <div class="health-meter-header">
+                <span><i class="fas fa-tachometer-alt" style="color: var(--road-yellow);"></i> Visual Condition Score (PCI Index)</span>
+                <span id="res-health-percent" style="font-family: var(--font-mono); color: var(--text-primary);">92 / 100</span>
+              </div>
+              <div class="health-bar-track">
+                <div id="res-health-bar-fill" class="health-bar-fill" style="width: 92%; background: var(--indicator-good);"></div>
+              </div>
+            </div>
+
+            <!-- Ensemble Probability Breakdown -->
+            <div>
+              <div style="font-size: 0.78rem; font-weight: 700; color: var(--text-secondary); margin-bottom: 8px;">
+                <i class="fas fa-chart-pie" style="color: var(--road-yellow);"></i> Ensemble Class Probability Breakdown:
+              </div>
+              <div id="res-prob-bars" class="prob-bars-grid">
+                <!-- Dynamically populated -->
+              </div>
+            </div>
+
+            <!-- Engineering Assessment Explanation -->
+            <div class="explanation-box">
+              <div style="font-size: 0.75rem; font-weight: 700; color: var(--road-yellow-bright); text-transform: uppercase; margin-bottom: 4px;">
+                <i class="fas fa-info-circle"></i> Pavement Engineering Explanation:
+              </div>
+              <p id="res-explanation-text">
+                Road surface parameters are within sound structural limits.
+              </p>
+            </div>
+
+            <!-- Recommended Maintenance Action -->
+            <div class="action-box">
+              <div id="res-maint-title" class="action-title">
+                <i class="fas fa-tools"></i> Recommended Maintenance Action
+              </div>
+              <div id="res-maint-desc" class="action-desc">
+                Conduct scheduled visual inspections and crack sealing.
+              </div>
+            </div>
+
+            <div class="model-runtime-note">
+              <i class="fas fa-check-circle" style="color: var(--indicator-good);"></i> Real scikit-learn Random Forest ensemble running client-side with 100 decision trees.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       3. ROAD CONDITION CATEGORIES (INDIAN STANDARDS)
+       ========================================================= -->
+  <section id="categories" style="background: #0b1220;">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fas fa-layer-group"></i> Classification Categories</div>
+        <h2 class="section-title">Road Condition Categories</h2>
+        <p class="section-subtitle">
+          Under <strong>IRC:82-2015</strong>, Indian bituminous roads are categorized into four operational condition tiers, each triggering specific maintenance interventions.
+        </p>
+      </div>
+
+      <div class="categories-grid">
+        <!-- GOOD: Green -->
+        <div class="category-card good">
+          <div class="category-img-wrap">
+            <img src="assets/road-good.svg" alt="Good Indian Highway Condition">
+            <span class="category-card-tag good">GOOD (GREEN)</span>
+          </div>
+          <div class="category-card-body">
+            <h3>Good Condition</h3>
+            <p class="category-desc">
+              Pavement is in sound physical condition with minimal defects. High riding comfort, excellent skid resistance, and proper drainage cross-fall.
+            </p>
+            <ul class="threshold-list">
+              <li><span>Roughness (IRI):</span> <span>&lt; 3.0 m/km</span></li>
+              <li><span>Potholes:</span> <span>0 – 2 per 500m</span></li>
+              <li><span>Cracking Area:</span> <span>&lt; 8.0%</span></li>
+              <li><span>Rutting Depth:</span> <span>&lt; 6.0 mm</span></li>
+            </ul>
+            <div class="category-action-pill">
+              <strong>Action:</strong> Routine inspection, side drain desilting & preventive crack sealing.
+            </div>
+          </div>
+        </div>
+
+        <!-- FAIR: Yellow -->
+        <div class="category-card fair">
+          <div class="category-img-wrap">
+            <img src="assets/road-fair.svg" alt="Fair Indian Road Condition">
+            <span class="category-card-tag fair">FAIR (YELLOW)</span>
+          </div>
+          <div class="category-card-body">
+            <h3>Fair Condition</h3>
+            <p class="category-desc">
+              Moderate surface deterioration with initial bitumen binder aging, early micro-cracks, and minor wheelpath wear. Timely intervention prevents monsoon pothole propagation.
+            </p>
+            <ul class="threshold-list">
+              <li><span>Roughness (IRI):</span> <span>3.0 – 5.5 m/km</span></li>
+              <li><span>Potholes:</span> <span>2 – 6 per 500m</span></li>
+              <li><span>Cracking Area:</span> <span>8.0% – 20.0%</span></li>
+              <li><span>Rutting Depth:</span> <span>6.0 – 12.0 mm</span></li>
+            </ul>
+            <div class="category-action-pill">
+              <strong>Action:</strong> Preventive micro-surfacing, slurry seal & localized pothole patching.
+            </div>
+          </div>
+        </div>
+
+        <!-- POOR: Orange -->
+        <div class="category-card poor">
+          <div class="category-img-wrap">
+            <img src="assets/road-poor.svg" alt="Poor Indian Road Condition">
+            <span class="category-card-tag poor">POOR (ORANGE)</span>
+          </div>
+          <div class="category-card-body">
+            <h3>Poor Condition</h3>
+            <p class="category-desc">
+              Significant pavement distress, extensive alligator fatigue cracks, multiple potholes, and deep rutting depressions. Ride quality and vehicle operating costs are heavily affected.
+            </p>
+            <ul class="threshold-list">
+              <li><span>Roughness (IRI):</span> <span>5.5 – 8.5 m/km</span></li>
+              <li><span>Potholes:</span> <span>6 – 14 per 500m</span></li>
+              <li><span>Cracking Area:</span> <span>20.0% – 35.0%</span></li>
+              <li><span>Rutting Depth:</span> <span>12.0 – 20.0 mm</span></li>
+            </ul>
+            <div class="category-action-pill">
+              <strong>Action:</strong> Surface cold milling & 40mm Bituminous Concrete (BC) structural overlay.
+            </div>
+          </div>
+        </div>
+
+        <!-- VERY POOR: Red -->
+        <div class="category-card very-poor">
+          <div class="category-img-wrap">
+            <img src="assets/road-very-poor.svg" alt="Very Poor Indian Road Condition">
+            <span class="category-card-tag very-poor">VERY POOR (RED)</span>
+          </div>
+          <div class="category-card-body">
+            <h3>Very Poor Condition</h3>
+            <p class="category-desc">
+              Severe pavement disintegration, granular base failure, deep longitudinal ruts, and massive hazardous potholes. Severely compromises road safety and causes vehicle rollovers.
+            </p>
+            <ul class="threshold-list">
+              <li><span>Roughness (IRI):</span> <span>&gt; 8.5 m/km</span></li>
+              <li><span>Potholes:</span> <span>&gt; 14 per 500m</span></li>
+              <li><span>Cracking Area:</span> <span>&gt; 35.0%</span></li>
+              <li><span>Rutting Depth:</span> <span>&gt; 20.0 mm</span></li>
+            </ul>
+            <div class="category-action-pill">
+              <strong>Action:</strong> Urgent full-depth reconstruction, FDR & subgrade geotextile stabilization.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       4. INDIAN ROAD CONDITION DATASET EXPLORER
+       ========================================================= -->
+  <section id="dataset">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fas fa-database"></i> 10 Indian Cities Dataset</div>
+        <h2 class="section-title">Indian Road Condition Dataset Explorer</h2>
+        <p class="section-subtitle">
+          Explore all <strong>120 usable road records</strong> across 10 major Indian hubs: Pune, Mumbai, Bengaluru, Delhi, Hyderabad, Chennai, Jaipur, Ahmedabad, Lucknow, and Nagpur.
+        </p>
+      </div>
+
+      <div class="dataset-toolbar">
+        <div class="search-filter-group">
+          <!-- Text Search -->
+          <div class="search-input-wrap">
+            <i class="fas fa-search"></i>
+            <input type="text" id="dataset-search" class="search-input" placeholder="Search record ID, city, road segment, type...">
+          </div>
+
+          <!-- City Filter -->
+          <select id="dataset-filter-city" class="filter-select">
+            <option value="all">All 10 Indian Cities</option>
+            <option value="Pune">Pune, Maharashtra</option>
+            <option value="Mumbai">Mumbai, Maharashtra</option>
+            <option value="Bengaluru">Bengaluru, Karnataka</option>
+            <option value="Delhi">Delhi, NCR</option>
+            <option value="Hyderabad">Hyderabad, Telangana</option>
+            <option value="Chennai">Chennai, Tamil Nadu</option>
+            <option value="Jaipur">Jaipur, Rajasthan</option>
+            <option value="Ahmedabad">Ahmedabad, Gujarat</option>
+            <option value="Lucknow">Lucknow, Uttar Pradesh</option>
+            <option value="Nagpur">Nagpur, Maharashtra</option>
+          </select>
+
+          <!-- Condition Filter -->
+          <select id="dataset-filter-condition" class="filter-select">
+            <option value="all">All Conditions (4 Tiers)</option>
+            <option value="Good">Good (Green)</option>
+            <option value="Fair">Fair (Yellow)</option>
+            <option value="Poor">Poor (Orange)</option>
+            <option value="Very Poor">Very Poor (Red)</option>
+          </select>
+
+          <!-- Drainage Filter -->
+          <select id="dataset-filter-drainage" class="filter-select">
+            <option value="all">All Drainage Ratings</option>
+            <option value="Good">Good Drainage</option>
+            <option value="Moderate">Moderate Drainage</option>
+            <option value="Poor">Poor Drainage</option>
+          </select>
+        </div>
+
+        <button id="btn-download-csv" class="btn btn-secondary btn-sm">
+          <i class="fas fa-file-csv" style="color: var(--road-yellow);"></i> Download Dataset as CSV
+        </button>
+      </div>
+
+      <!-- Dataset Table -->
+      <div class="dataset-table-container">
+        <table class="dataset-table">
+          <thead>
+            <tr>
+              <th>Record ID</th>
+              <th>City & Road Segment</th>
+              <th>IRI (m/km)</th>
+              <th>Potholes (#)</th>
+              <th>Cracks (%)</th>
+              <th>Rutting (mm)</th>
+              <th>Age (yrs)</th>
+              <th>Traffic (vpd)</th>
+              <th>Drainage</th>
+              <th>Condition</th>
+            </tr>
+          </thead>
+          <tbody id="dataset-tbody">
+            <!-- Dynamically populated by app.js -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Pagination Bar -->
+      <div class="pagination-bar">
+        <div>
+          Showing <span id="dataset-total-count" style="font-weight: 700; color: var(--road-yellow-bright);">120 records</span>
+        </div>
+        <div class="pagination-controls">
+          <button id="btn-page-prev" class="page-btn"><i class="fas fa-chevron-left"></i> Previous</button>
+          <span id="dataset-page-info" style="align-self: center; font-size: 0.8rem; padding: 0 8px;">Page 1 of 12</span>
+          <button id="btn-page-next" class="page-btn">Next <i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+
+      <!-- Transparent Academic Source Callout -->
+      <div class="dataset-source-note">
+        <strong><i class="fas fa-info-circle" style="color: var(--road-yellow);"></i> Academic Demonstration Dataset Notice:</strong><br>
+        This dataset consists of <strong>120 realistic synthetic records</strong> modeled mathematically using degradation criteria from <strong>IRC:82-2015</strong> (<em>Code of Practice for Maintenance of Bituminous Surfaces of Highways</em>) and <strong>World Bank HDM-4</strong> benchmarks across 10 Indian cities. Generated strictly for academic mini-project demonstration; it does not claim to represent physical inspection records collected from municipal corporations or NHAI field teams.
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       5. MACHINE LEARNING MODEL METHODOLOGY (CO3)
+       ========================================================= -->
+  <section id="ml-model" style="background: #0b1220;">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fas fa-brain"></i> Methodology & Algorithm (CO3)</div>
+        <h2 class="section-title">Machine Learning Methodology</h2>
+        <p class="section-subtitle">
+          How the Random Forest Classifier was designed, trained, and verified for Civil Engineering pavement analysis.
+        </p>
+      </div>
+
+      <!-- Concepts Grid -->
+      <div class="ml-explainer-grid">
+        <div class="ml-concept-card">
+          <h3><i class="fas fa-robot"></i> What is Machine Learning?</h3>
+          <p>
+            Machine Learning enables computers to learn deterioration patterns directly from empirical road defect inspection data, replacing rigid empirical formulas with predictive statistical models.
+          </p>
+        </div>
+        <div class="ml-concept-card">
+          <h3><i class="fas fa-check-double"></i> Supervised Classification</h3>
+          <p>
+            Supervised Learning uses ground-truth labeled historical records to train the algorithm. Classification categorizes road segments into discrete health classes (Good, Fair, Poor, Very Poor).
+          </p>
+        </div>
+        <div class="ml-concept-card">
+          <h3><i class="fas fa-tree"></i> Why Random Forest?</h3>
+          <p>
+            Combines an ensemble of 100 de-correlated decision trees with bootstrap aggregation. Robust against sensor noise, partitions complex interactions between distresses, and prevents overfitting.
+          </p>
+        </div>
+      </div>
+
+      <!-- System Architecture Flow Diagram -->
+      <div class="pipeline-box">
+        <div class="pipeline-title"><i class="fas fa-project-diagram" style="color: var(--road-yellow);"></i> End-to-End Machine Learning Pipeline</div>
+        <div class="flowchart-wrapper">
+          <div class="flow-step">
+            <div class="flow-step-icon"><i class="fas fa-database"></i></div>
+            <div class="flow-step-title">Indian Road Dataset</div>
+            <div class="flow-step-desc">120 Records (7 Features)</div>
+          </div>
+          <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+          <div class="flow-step">
+            <div class="flow-step-icon"><i class="fas fa-filter"></i></div>
+            <div class="flow-step-title">Data Preprocessing</div>
+            <div class="flow-step-desc">Drainage Encoding (0,1,2)</div>
+          </div>
+          <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+          <div class="flow-step">
+            <div class="flow-step-icon"><i class="fas fa-columns"></i></div>
+            <div class="flow-step-title">80/20 Train-Test Split</div>
+            <div class="flow-step-desc">96 Train / 24 Test Split</div>
+          </div>
+          <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+          <div class="flow-step">
+            <div class="flow-step-icon"><i class="fas fa-tree"></i></div>
+            <div class="flow-step-title">Random Forest</div>
+            <div class="flow-step-desc">100 Trees (Depth 6)</div>
+          </div>
+          <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+          <div class="flow-step">
+            <div class="flow-step-icon"><i class="fas fa-bolt"></i></div>
+            <div class="flow-step-title">Ensemble Voting</div>
+            <div class="flow-step-desc">Majority Class Probabilities</div>
+          </div>
+          <div class="flow-arrow"><i class="fas fa-arrow-right"></i></div>
+          <div class="flow-step">
+            <div class="flow-step-icon"><i class="fas fa-award"></i></div>
+            <div class="flow-step-title">Evaluation</div>
+            <div class="flow-step-desc">Confusion Matrix & Metrics</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Split Ratio Banner -->
+      <div class="split-ratio-banner">
+        <div>
+          <span style="font-weight: 700; color: var(--text-primary); font-size: 0.95rem;">Assignment Train-Test Split Ratio:</span>
+          <span style="color: var(--text-muted); font-size: 0.85rem; margin-left: 8px;">Stratified sampling across all 4 condition tiers</span>
+        </div>
+        <div style="display: flex; gap: 12px;">
+          <span class="split-pill train"><i class="fas fa-dumbbell"></i> 80% Training Set (96 records)</span>
+          <span class="split-pill test"><i class="fas fa-vial"></i> 20% Testing Set (24 records)</span>
+        </div>
+      </div>
+
+      <!-- Feature Importance Graph Card -->
+      <div class="chart-card">
+        <div class="chart-header">
+          <div class="chart-title">
+            <i class="fas fa-chart-bar" style="color: var(--road-yellow);"></i> Gini Feature Importance Ranking (From Trained Model)
+          </div>
+          <span style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono);">CALCULATED IN PYTHON</span>
+        </div>
+        <div class="chart-container-wrap">
+          <canvas id="chart-feature-importance"></canvas>
+        </div>
+        <p style="font-size: 0.82rem; color: var(--text-secondary); margin-top: 14px; line-height: 1.5;">
+          <strong>Civil Engineering Interpretation:</strong> Roughness Index (IRI at <strong>25.58%</strong>) and Crack Percentage (<strong>23.03%</strong>) together account for over <strong>48%</strong> of predictive weight in the Random Forest ensemble, aligning with pavement mechanics where unevenness and fatigue cracks are leading indicators of structural distress.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       6. MODEL PERFORMANCE AND EVALUATION (CO4)
+       ========================================================= -->
+  <section id="evaluation">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fas fa-chart-bar"></i> Performance & Metrics (CO4)</div>
+        <h2 class="section-title">Model Performance & Evaluation Dashboard</h2>
+        <p class="section-subtitle">
+          All evaluation metrics below are <strong>empirically calculated</strong> on the unseen 20% test partition (24 samples) using Python scikit-learn. No invented values.
+        </p>
+      </div>
+
+      <!-- Core Metrics Grid -->
+      <div class="eval-metrics-grid">
+        <div class="metric-box featured">
+          <div class="metric-val">95.83%</div>
+          <div class="metric-name">Overall Test Accuracy</div>
+          <div class="metric-sub">23 of 24 test segments correct</div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-val" style="color: #60a5fa;">96.43%</div>
+          <div class="metric-name">Weighted Precision</div>
+          <div class="metric-sub">Reliability of condition alerts</div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-val" style="color: #34d399;">95.83%</div>
+          <div class="metric-name">Weighted Recall</div>
+          <div class="metric-sub">Defect detection sensitivity</div>
+        </div>
+        <div class="metric-box">
+          <div class="metric-val" style="color: #c084fc;">95.80%</div>
+          <div class="metric-name">Weighted F1-Score</div>
+          <div class="metric-sub">Harmonic mean balance</div>
+        </div>
+      </div>
+
+      <!-- Confusion Matrix & Classification Report Grid -->
+      <div class="eval-tables-grid">
+        <!-- Interactive Confusion Matrix Heatmap -->
+        <div class="chart-card">
+          <div class="chart-header">
+            <div class="chart-title">
+              <i class="fas fa-th" style="color: var(--road-yellow);"></i> Interactive Confusion Matrix (24 Test Samples)
+            </div>
+            <span style="font-size: 0.72rem; color: var(--indicator-good); font-family: var(--font-mono);">23/24 CORRECT</span>
+          </div>
+
+          <div class="cm-container">
+            <div id="confusion-matrix-grid" class="cm-grid">
+              <!-- Dynamically populated by app.js -->
+            </div>
+            <div style="font-size: 0.76rem; color: var(--text-muted); margin-top: 8px;">
+              <span style="display: inline-block; width: 10px; height: 10px; background: rgba(16,185,129,0.3); border: 1px solid #10b981; border-radius: 2px;"></span> Diagonal = Correct Predictions |
+              <span style="display: inline-block; width: 10px; height: 10px; background: rgba(239,68,68,0.2); border: 1px solid #ef4444; border-radius: 2px;"></span> Off-diagonal = Misclassifications
+            </div>
+          </div>
+        </div>
+
+        <!-- Official Classification Report Table -->
+        <div class="chart-card">
+          <div class="chart-header">
+            <div class="chart-title">
+              <i class="fas fa-file-invoice" style="color: var(--road-yellow);"></i> Classification Report (Per-Class Breakdown)
+            </div>
+            <span style="font-size: 0.72rem; color: var(--text-muted); font-family: var(--font-mono);">SCIKIT-LEARN TEST RESULTS</span>
+          </div>
+
+          <table class="dataset-table" style="font-size: 0.8rem;">
+            <thead>
+              <tr>
+                <th>Condition Category</th>
+                <th>Precision</th>
+                <th>Recall</th>
+                <th>F1-Score</th>
+                <th>Support</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Good (Green)</strong></td>
+                <td>1.00 (100%)</td>
+                <td>1.00 (100%)</td>
+                <td>1.00 (100%)</td>
+                <td>6 segments</td>
+              </tr>
+              <tr>
+                <td><strong>Fair (Yellow)</strong></td>
+                <td>0.86 (85.7%)</td>
+                <td>1.00 (100%)</td>
+                <td>0.92 (92.3%)</td>
+                <td>6 segments</td>
+              </tr>
+              <tr>
+                <td><strong>Poor (Orange)</strong></td>
+                <td>1.00 (100%)</td>
+                <td>0.83 (83.3%)</td>
+                <td>0.91 (90.9%)</td>
+                <td>6 segments</td>
+              </tr>
+              <tr>
+                <td><strong>Very Poor (Red)</strong></td>
+                <td>1.00 (100%)</td>
+                <td>1.00 (100%)</td>
+                <td>1.00 (100%)</td>
+                <td>6 segments</td>
+              </tr>
+              <tr style="background: rgba(255,255,255,0.03); font-weight: 700;">
+                <td style="color: var(--road-yellow-bright);">Weighted Average</td>
+                <td>0.96 (96.4%)</td>
+                <td>0.96 (95.8%)</td>
+                <td>0.96 (95.8%)</td>
+                <td>24 segments</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Actual vs Predicted Test Set Comparison Table -->
+      <div class="test-samples-wrapper">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+          <h3 style="font-size: 1.05rem; font-weight: 700; color: var(--text-primary);">
+            <i class="fas fa-tasks" style="color: var(--road-yellow);"></i> Actual vs. Predicted Test Set Comparison (24 Indian Road Records)
+          </h3>
+          <select id="test-eval-filter" class="filter-select">
+            <option value="all">Show All 24 Test Records</option>
+            <option value="errors">Show Misclassified Only (1 Record)</option>
+            <option value="correct">Show Correctly Classified Only (23 Records)</option>
+          </select>
+        </div>
+
+        <div style="overflow-x: auto;">
+          <table class="dataset-table" style="font-size: 0.8rem;">
+            <thead>
+              <tr>
+                <th>Record ID</th>
+                <th>City & Key Distress</th>
+                <th>Actual Ground Truth</th>
+                <th>Predicted by RF</th>
+                <th>Confidence</th>
+                <th>Result Status</th>
+              </tr>
+            </thead>
+            <tbody id="test-eval-tbody">
+              <!-- Dynamically populated by app.js -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Main Finding Box (CO4 Requirement) -->
+      <div class="viva-finding-box">
+        <div class="viva-finding-header">
+          <i class="fas fa-microscope"></i> Main Engineering Finding & Boundary Analysis (CO4 Requirement)
+        </div>
+        <div class="viva-finding-body">
+          Our model achieved a high <strong>95.83% accuracy</strong> on the 20% test partition. The sole misclassified sample was record <strong>IND-RD-135</strong> (actual condition: Poor, predicted: Fair). Upon physical distress analysis, segment IND-RD-135 had an IRI of <strong>5.4 m/km</strong> and crack extent of <strong>18.8%</strong>, placing it directly on the boundary threshold separating Fair (IRI 3.0–5.5) and Poor (IRI 5.5–8.5) under IRC:82 guidelines. Because its rutting (12.2mm) was moderate, the ensemble majority voted Fair. This demonstrates that Machine Learning models capture the continuous, gradual nature of pavement aging rather than rigid artificial thresholds.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Inspection Analysis Charts Section -->
+  <section id="analysis" style="background: #0b1220;">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fas fa-chart-pie"></i> Exploratory Data Analysis</div>
+        <h2 class="section-title">Road Inspection Analysis</h2>
+        <p class="section-subtitle">
+          Inspection metrics across the 120 Indian road segments demonstrating physical distress patterns and condition distributions.
+        </p>
+      </div>
+
+      <div class="analysis-charts-grid">
+        <div class="chart-card">
+          <div class="chart-header">
+            <div class="chart-title">
+              <i class="fas fa-chart-pie" style="color: var(--road-yellow);"></i> Dataset Class Balance (30 per Category)
+            </div>
+            <span style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono);">STRATIFIED DATASET</span>
+          </div>
+          <div class="chart-container-wrap">
+            <canvas id="chart-condition-dist"></canvas>
+          </div>
+          <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 12px;">
+            The dataset is balanced with exactly 30 segments (25%) per condition category to prevent algorithmic majority class bias.
+          </p>
+        </div>
+
+        <div class="chart-card">
+          <div class="chart-header">
+            <div class="chart-title">
+              <i class="fas fa-chart-bar" style="color: var(--road-yellow);"></i> Average Defect Severity Across Categories
+            </div>
+            <span style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono);">DISTRESS COMPARISON</span>
+          </div>
+          <div class="chart-container-wrap">
+            <canvas id="chart-defect-comparison"></canvas>
+          </div>
+          <p style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 12px;">
+            Demonstrates progressive escalation: Very Poor roads exhibit over 10x more potholes and 4x higher roughness compared to Good roads.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Maintenance Recommendations (IRC:82 Guidelines) -->
+  <section id="maintenance">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fas fa-tools"></i> Maintenance Recommendations</div>
+        <h2 class="section-title">Indian Road Maintenance Interventions (IRC:82)</h2>
+        <p class="section-subtitle">
+          Specific maintenance guidelines aligned with the <strong>Indian Roads Congress IRC:82-2015</strong> standard maintenance manual for bituminous highways.
+        </p>
+      </div>
+
+      <div class="maint-matrix-grid">
+        <!-- Good -->
+        <div class="maint-card">
+          <span class="maint-badge" style="background: rgba(16,185,129,0.15); color: var(--indicator-good);">TIER 1 — GOOD (GREEN)</span>
+          <h4>Routine Maintenance</h4>
+          <ul class="maint-action-list">
+            <li><i class="fas fa-check"></i> Crack sealing on isolated hairline fissures (&lt;3mm).</li>
+            <li><i class="fas fa-check"></i> Periodic clearance of roadside storm drains and culverts.</li>
+            <li><i class="fas fa-check"></i> Shoulder grading and vegetation clearance.</li>
+            <li><i class="fas fa-check"></i> Biannual visual pavement condition surveys.</li>
+          </ul>
+          <div class="maint-cost-est">EST. COST: ~₹120 – ₹180 / m²</div>
+        </div>
+
+        <!-- Fair -->
+        <div class="maint-card">
+          <span class="maint-badge" style="background: rgba(234,179,8,0.15); color: var(--indicator-fair);">TIER 2 — FAIR (YELLOW)</span>
+          <h4>Preventive Surface Treatment</h4>
+          <ul class="maint-action-list">
+            <li><i class="fas fa-check"></i> Micro-surfacing or Slurry Seal application.</li>
+            <li><i class="fas fa-check"></i> Rapid patch repair of isolated potholes with cold/hot mix.</li>
+            <li><i class="fas fa-check"></i> Fog seal spraying to rejuvenate oxidized bitumen binders.</li>
+            <li><i class="fas fa-check"></i> Rectification of shoulder drop-offs and cross-fall.</li>
+          </ul>
+          <div class="maint-cost-est">EST. COST: ~₹280 – ₹450 / m²</div>
+        </div>
+
+        <!-- Poor -->
+        <div class="maint-card">
+          <span class="maint-badge" style="background: rgba(249,115,22,0.15); color: var(--indicator-poor);">TIER 3 — POOR (ORANGE)</span>
+          <h4>Rehabilitation & Overlay</h4>
+          <ul class="maint-action-list">
+            <li><i class="fas fa-check"></i> Cold milling (planing) of rutted and cracked surface layer.</li>
+            <li><i class="fas fa-check"></i> 40mm Bituminous Concrete (BC) structural overlay.</li>
+            <li><i class="fas fa-check"></i> Deep base repair with Dense Bituminous Macadam (DBM).</li>
+            <li><i class="fas fa-check"></i> Complete culvert and side-drain overhaul.</li>
+          </ul>
+          <div class="maint-cost-est">EST. COST: ~₹900 – ₹1,400 / m²</div>
+        </div>
+
+        <!-- Very Poor -->
+        <div class="maint-card">
+          <span class="maint-badge" style="background: rgba(239,68,68,0.15); color: var(--indicator-very-poor);">TIER 4 — VERY POOR (RED)</span>
+          <h4>Complete Reconstruction</h4>
+          <ul class="maint-action-list">
+            <li><i class="fas fa-check"></i> Full-Depth Reclamation (FDR) with cement/emulsion.</li>
+            <li><i class="fas fa-check"></i> Granular subgrade stabilization and geotextile installation.</li>
+            <li><i class="fas fa-check"></i> Full pavement redesign according to IRC:37-2018.</li>
+            <li><i class="fas fa-check"></i> Structural drainage system reconstruction.</li>
+          </ul>
+          <div class="maint-cost-est">EST. COST: ~₹2,200 – ₹3,500 / m²</div>
+        </div>
+      </div>
+
+      <!-- Lifecycle Cost Comparison Widget -->
+      <div class="lca-widget">
+        <div class="lca-header">
+          <h3><i class="fas fa-rupee-sign" style="color: var(--road-yellow);"></i> Pavement Lifecycle Cost Analysis (LCA) in India</h3>
+          <p>Economic comparison between proactive AI-scheduled maintenance vs traditional reactive repairs</p>
+        </div>
+
+        <div class="lca-bars-container">
+          <div class="lca-option-card highlight">
+            <span style="font-size: 0.75rem; color: var(--indicator-good); font-weight: 700; text-transform: uppercase;">
+              <i class="fas fa-check-circle"></i> Strategy A: Predictive AI Maintenance (RoadVision AI)
+            </span>
+            <div class="lca-cost-tag low">₹3.5 Lakhs / km</div>
+            <p style="font-size: 0.84rem; color: var(--text-secondary);">
+              Timely intervention at "Fair" condition using micro-surfacing and preventative crack sealing preserves the structural base and extends pavement design life by <strong>6 to 8 years</strong>.
+            </p>
+          </div>
+
+          <div class="lca-option-card">
+            <span style="font-size: 0.75rem; color: var(--indicator-very-poor); font-weight: 700; text-transform: uppercase;">
+              <i class="fas fa-times-circle"></i> Strategy B: Reactive "Fix On Complaint" Maintenance
+            </span>
+            <div class="lca-cost-tag high">₹24.0 Lakhs / km</div>
+            <p style="font-size: 0.84rem; color: var(--text-secondary);">
+              Waiting until potholes propagate into the subgrade leads to structural base collapse, requiring full-depth reconstruction at <strong>nearly 7 times the cost</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Engineering Field Disclaimer -->
+      <div class="eng-disclaimer">
+        <i class="fas fa-exclamation-circle" style="color: var(--road-yellow);"></i> <strong>Civil Engineering Field Note:</strong> All recommendations generated by RoadVision AI represent preliminary screening advice. Final engineering execution requires on-site non-destructive deflection testing (Falling Weight Deflectometer - FWD or Benkelman Beam) and validation by a certified Pavement Engineer under IRC guidelines.
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       7. CIVIL ENGINEERING APPLICATIONS
+       ========================================================= -->
+  <section id="applications" style="background: #0b1220;">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fas fa-city"></i> Indian Infrastructure Impact</div>
+        <h2 class="section-title">Civil Engineering Applications in India</h2>
+        <p class="section-subtitle">
+          How automated road condition classification transforms municipal operations, state public works departments, and national highway authorities.
+        </p>
+      </div>
+
+      <div class="app-grid">
+        <div class="app-card">
+          <div class="app-icon"><i class="fas fa-road"></i></div>
+          <h3>NHAI & MoRTH Highway Monitoring</h3>
+          <p>
+            Enables the National Highways Authority of India (NHAI) to monitor concessionaire highway stretches objectively, standardizing quality assessments across toll corridors.
+          </p>
+        </div>
+
+        <div class="app-card">
+          <div class="app-icon"><i class="fas fa-building"></i></div>
+          <h3>Municipal Corporations (PMC, BMC, BBMP, MCD)</h3>
+          <p>
+            Provides city municipal corporations with an automated Pavement Management System (PMS) to prioritize pothole patching before monsoon flooding.
+          </p>
+        </div>
+
+        <div class="app-card">
+          <div class="app-icon"><i class="fas fa-balance-scale"></i></div>
+          <h3>Public Works Departments (State PWD)</h3>
+          <p>
+            Replaces subjective manual visual inspections with an objective, data-driven ranking system that allocates state road funds with quantifiable transparency.
+          </p>
+        </div>
+
+        <div class="app-card">
+          <div class="app-icon"><i class="fas fa-car-crash"></i></div>
+          <h3>Road Safety & Blackspot Elimination</h3>
+          <p>
+            Correlates high-risk pavement defect clusters (severe rutting + frequent potholes) with accident blackspots to execute rapid corrective overlays.
+          </p>
+        </div>
+
+        <div class="app-card">
+          <div class="app-icon"><i class="fas fa-map-marked-alt"></i></div>
+          <h3>Smart City Digital Twin & GIS Integration</h3>
+          <p>
+            Exportable tabular records can be ingested directly into municipal GIS spatial databases to generate color-coded road health city maps.
+          </p>
+        </div>
+
+        <div class="app-card">
+          <div class="app-icon"><i class="fas fa-leaf"></i></div>
+          <h3>Sustainable Bitumen Resource Allocation</h3>
+          <p>
+            Preventive overlays consume 60% less asphalt binder and crushed aggregate than full reconstruction, significantly decreasing the carbon footprint of highway maintenance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       8. ABOUT PROJECT & STUDENT TEAM
+       ========================================================= -->
+  <section id="about-project">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fas fa-university"></i> Academic Submission</div>
+        <h2 class="section-title">About the Project & Student Team</h2>
+        <p class="section-subtitle">
+          Developed as a university mini project in Artificial Intelligence & Machine Learning under the Department of Civil Engineering.
+        </p>
+      </div>
+
+      <div class="project-info-grid">
+        <!-- Academic Meta Card -->
+        <div class="academic-meta-card">
+          <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--road-yellow-bright); margin-bottom: 16px;">
+            <i class="fas fa-book-reader"></i> Academic Metadata
+          </h3>
+
+          <div class="meta-row">
+            <span class="meta-label">Project Title:</span>
+            <span class="meta-val">RoadVision AI – Indian Roads</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Subject:</span>
+            <span class="meta-val">Artificial Intelligence & Machine Learning</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Department:</span>
+            <span class="meta-val">Civil Engineering</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Course Outcomes:</span>
+            <span class="meta-val">CO3 (5 Marks) & CO4 (5 Marks)</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">ML Algorithm:</span>
+            <span class="meta-val">Random Forest Classifier (100 Trees)</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Language / Stack:</span>
+            <span class="meta-val">Python 3.11, Scikit-Learn, Pandas, JS</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Environment:</span>
+            <span class="meta-val">Google Colab & Jupyter Notebook</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">Standards Used:</span>
+            <span class="meta-val">IRC:82-2015, IRC:37-2018 & MoRTH</span>
+          </div>
+        </div>
+
+        <!-- Student Team Contributions Card -->
+        <div>
+          <h3 style="font-size: 1.15rem; font-weight: 800; color: var(--text-primary); margin-bottom: 16px;">
+            <i class="fas fa-users-cog" style="color: var(--road-yellow);"></i> Group Members & Specific Contributions
+            <span style="font-size: 0.72rem; color: var(--text-muted); font-weight: 400; margin-left: 8px;">(Click name or roll to edit)</span>
+          </h3>
+
+          <div class="team-cards-container">
+            <!-- Student 1 -->
+            <div class="student-card">
+              <div class="student-info">
+                <h4 id="member-1-name">Rohan Sharma</h4>
+                <div id="member-1-roll" class="student-roll">CE-2024-042</div>
+                <div class="student-role">
+                  <strong>Contribution:</strong> Problem formulation, IRC:82 pavement parameter definitions, synthetic dataset engineering for 10 Indian cities (120 records), and exploratory data preprocessing.
+                </div>
+              </div>
+              <div class="edit-badge" title="Click to edit name/roll"><i class="fas fa-pencil-alt"></i></div>
+            </div>
+
+            <!-- Student 2 -->
+            <div class="student-card">
+              <div class="student-info">
+                <h4 id="member-2-name">Ananya Patel</h4>
+                <div id="member-2-roll" class="student-roll">CE-2024-058</div>
+                <div class="student-role">
+                  <strong>Contribution:</strong> Machine Learning model development, 80:20 stratified train/test split, Random Forest training & hyperparameter tuning in Google Colab.
+                </div>
+              </div>
+              <div class="edit-badge" title="Click to edit name/roll"><i class="fas fa-pencil-alt"></i></div>
+            </div>
+
+            <!-- Student 3 -->
+            <div class="student-card">
+              <div class="student-info">
+                <h4 id="member-3-name">Aditya Deshmukh</h4>
+                <div id="member-3-roll" class="student-roll">CE-2024-071</div>
+                <div class="student-role">
+                  <strong>Contribution:</strong> Model evaluation dashboard (Confusion Matrix, Precision/Recall, Feature Importance), web interface controller, and viva demonstration guide.
+                </div>
+              </div>
+              <div class="edit-badge" title="Click to edit name/roll"><i class="fas fa-pencil-alt"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Download Center Bar -->
+      <div class="download-center">
+        <div class="download-left">
+          <h3><i class="fas fa-download" style="color: var(--road-yellow);"></i> Student Project Deliverables</h3>
+          <p>Download the official Jupyter Notebook, full academic report, or raw Indian road dataset.</p>
+        </div>
+        <div class="download-actions">
+          <button id="btn-download-notebook" class="btn btn-primary">
+            <i class="fab fa-python"></i> Colab Notebook (.ipynb)
+          </button>
+          <button class="btn btn-secondary" onclick="document.getElementById('btn-open-report-modal').click();">
+            <i class="fas fa-file-pdf"></i> Academic Report
+          </button>
+          <button class="btn btn-outline" onclick="document.getElementById('btn-download-csv').click();">
+            <i class="fas fa-database"></i> Dataset (.csv)
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Limitations & Future Scope -->
+  <section id="limitations" style="background: #0b1220;">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag"><i class="fas fa-balance-scale"></i> Critical Evaluation</div>
+        <h2 class="section-title">Limitations & Future Scope</h2>
+        <p class="section-subtitle">
+          Transparent evaluation of current project boundaries and planned engineering extensions for Indian roads.
+        </p>
+      </div>
+
+      <div class="limits-future-grid">
+        <div class="limit-box">
+          <div class="limit-header limits">
+            <i class="fas fa-exclamation-triangle"></i> Project Limitations
+          </div>
+          <ul class="limit-list">
+            <li>
+              <i class="fas fa-times-circle" style="color: #f87171;"></i>
+              <div>
+                <strong>Surface-Level Observation:</strong> The model evaluates surface distress ($IRI$, cracks, rutting, potholes) but cannot detect internal subgrade soil moisture saturation without Falling Weight Deflectometer (FWD) or Benkelman Beam Deflection (BBD) data.
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-times-circle" style="color: #f87171;"></i>
+              <div>
+                <strong>Synthetic Academic Data:</strong> While modeled after IRC:82 and World Bank benchmarks, synthetic demonstration data cannot fully capture erratic monsoon cloudbursts or localized overloading shocks.
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-times-circle" style="color: #f87171;"></i>
+              <div>
+                <strong>Manual Entry Subjectivity:</strong> Manual visual estimation of crack percentages and pothole counts can introduce human observational bias.
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="limit-box">
+          <div class="limit-header future">
+            <i class="fas fa-rocket"></i> Future Engineering Scope
+          </div>
+          <ul class="limit-list">
+            <li>
+              <i class="fas fa-check-circle" style="color: #38bdf8;"></i>
+              <div>
+                <strong>Computer Vision Pothole Detection:</strong> Deploying YOLOv8/v11 deep learning models on smartphone dashcam video to detect, measure, and geolocate potholes automatically.
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-check-circle" style="color: #38bdf8;"></i>
+              <div>
+                <strong>Smartphone Accelerometer Telemetry:</strong> Using 3-axis smartphone gyroscopes and accelerometers to estimate International Roughness Index (IRI) continuously while driving.
+              </div>
+            </li>
+            <li>
+              <i class="fas fa-check-circle" style="color: #38bdf8;"></i>
+              <div>
+                <strong>Integration with PMGSY / NHAI Portals:</strong> Feeding classified health indices directly into government rural and highway asset management portals.
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       FOOTER & MODALS
+       ========================================================= -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>RoadVision AI</h4>
+          <p>
+            An Artificial Intelligence and Machine Learning mini project developed by Indian Civil Engineering students to classify flexible road conditions and recommend proactive maintenance under IRC:82 guidelines.
+          </p>
+          <div style="margin-top: 14px; font-size: 0.78rem; color: var(--road-yellow-bright);">
+            <i class="fas fa-award"></i> University Mini Project Evaluation (10 Marks | CO3 & CO4)
+          </div>
+        </div>
+
+        <div class="footer-links">
+          <h5>Quick Navigation</h5>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#classification">Classification</a></li>
+            <li><a href="#dataset">Dataset Explorer (120 Records)</a></li>
+            <li><a href="#ml-model">ML Model</a></li>
+            <li><a href="#evaluation">Evaluation</a></li>
+            <li><a href="#applications">Applications</a></li>
+            <li><a href="#about-project">About Project</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h5>Academic Resources</h5>
+          <ul>
+            <li><a href="#viva" onclick="document.getElementById('btn-open-viva-modal').click(); return false;">5-Minute Viva Demo Guide</a></li>
+            <li><a href="#report" onclick="document.getElementById('btn-open-report-modal').click(); return false;">Academic Project Report</a></li>
+            <li><a href="#download" onclick="document.getElementById('btn-download-notebook').click(); return false;">Download Google Colab Notebook</a></li>
+            <li><a href="#csv" onclick="document.getElementById('btn-download-csv').click(); return false;">Download Dataset CSV</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2024–2025 RoadVision AI — Intelligent Road Condition Classification System for Indian Roads. Academic Demonstration Purpose.</div>
+        <div>Complies with Indian Roads Congress (IRC:82-2015) Guidelines</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       MODAL 1: 5-MINUTE VIVA DEMONSTRATION WALKTHROUGH GUIDE
+       ========================================================= -->
+  <div id="vivaModal" class="modal-overlay">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3><i class="fas fa-chalkboard-teacher"></i> 5-Minute Viva Demonstration Guide</h3>
+        <button id="btn-close-viva" class="modal-close">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div style="background: rgba(245, 158, 11, 0.1); border-left: 3px solid var(--road-yellow); padding: 12px; margin-bottom: 16px; border-radius: 4px;">
+          <strong>Examiner Presentation Strategy:</strong> Follow this exact 5-minute speaking script to address every single syllabus requirement for <strong>Question 1 (CO3 — 5 Marks)</strong> and <strong>Question 2 (CO4 — 5 Marks)</strong>.
+        </div>
+
+        <h4>Minute 1: Problem Statement & Indian Engineering Context (Student 1)</h4>
+        <p>
+          "Respected examiner, we selected the topic <strong>Road Condition Classification for Indian Roads</strong>. Indian bituminous pavements degrade non-linearly under heavy commercial axle loading and severe monsoon rains. Traditional municipal inspections are manual, subjective, and reactive. Our project, <strong>RoadVision AI</strong>, automates the classification of flexible pavements into 4 standard IRC:82 condition categories: Good (Green), Fair (Yellow), Poor (Orange), and Very Poor (Red)."
+        </p>
+
+        <h4>Minute 2: Dataset & Input Parameters across 10 Indian Cities (Student 1)</h4>
+        <p>
+          "We engineered a dataset of <strong>120 usable road records</strong> across 10 major Indian hubs (Pune, Mumbai, Bengaluru, Delhi, Hyderabad, Chennai, Jaipur, Ahmedabad, Lucknow, Nagpur) based on Indian Roads Congress <strong>IRC:82-2015</strong> and World Bank HDM-4 IRI benchmarks. The 7 input parameters are: International Roughness Index (IRI in m/km), Pothole Count per 500m, Crack Percentage, Rutting Depth (mm), Pavement Surface Age (years), Traffic Volume (vpd), and Drainage Condition (Good/Moderate/Poor)."
+        </p>
+
+        <h4>Minute 3: Machine Learning Model & 80/20 Train-Test Split (Student 2)</h4>
+        <p>
+          "As required by syllabus Question 1, we chose the <strong>Random Forest Classifier</strong>. We split our 120 records into an <strong>80% training set (96 samples)</strong> and a <strong>20% testing set (24 samples)</strong> using stratified sampling. Random Forest was selected because its ensemble of 100 de-correlated decision trees handles complex non-linear combinations of road distresses without overfitting, and ranks parameter importance."
+        </p>
+
+        <h4>Minute 4: Model Evaluation (Question 2 / CO4) (Student 3)</h4>
+        <p>
+          "Evaluating strictly on the unseen 20% test partition, our model achieved a test accuracy of <strong>95.83%</strong> (23 out of 24 correct), with weighted precision of <strong>96.43%</strong>, recall of <strong>95.83%</strong>, and F1-score of <strong>95.80%</strong>. Our Confusion Matrix reveals only a single boundary misclassification in segment IND-RD-135, where borderline cracks and IRI led to a Fair prediction for a Poor road."
+        </p>
+
+        <h4>Minute 5: Main Finding, Limitation & Practical Application (All Members)</h4>
+        <p>
+          "<strong>Main Finding:</strong> Roughness (IRI at 25.58%) and Crack Percentage (23.03%) account for 48.61% of predictive importance in Indian road deterioration.<br>
+          <strong>One Limitation:</strong> The model evaluates surface distress only; it lacks subsurface structural deflection data (such as Falling Weight Deflectometer surveys).<br>
+          <strong>Practical Civil Engineering Use:</strong> Municipal corporations (e.g. PMC, BMC, BBMP) can prioritize maintenance budgets to repair 'Fair' roads with ₹280/m² micro-surfacing before they collapse into ₹2,400/m² full reconstruction, saving up to 40% of maintenance budgets."
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" onclick="document.getElementById('btn-close-viva').click();">
+          <i class="fas fa-check"></i> Ready for Viva Demo
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       MODAL 2: COMPLETE ACADEMIC PROJECT REPORT (PRINTABLE)
+       ========================================================= -->
+  <div id="reportModal" class="modal-overlay">
+    <div class="modal-content" style="max-width: 950px;">
+      <div class="modal-header">
+        <h3><i class="fas fa-file-alt"></i> Academic Mini Project Report (CO3 & CO4)</h3>
+        <button id="btn-close-report" class="modal-close">&times;</button>
+      </div>
+      <div class="modal-body" id="printable-report-body">
+        <div style="text-align: center; border-bottom: 2px solid var(--road-yellow); padding-bottom: 16px; margin-bottom: 20px;">
+          <h2 style="color: var(--text-primary); font-size: 1.6rem; margin-bottom: 4px;">RoadVision AI: Intelligent Road Condition Classification System for Indian Roads</h2>
+          <div style="font-size: 0.95rem; color: var(--road-yellow-bright); font-weight: 700;">Department of Civil Engineering | Artificial Intelligence and Machine Learning Mini Project</div>
+          <div style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Syllabus Evaluation: 10 Marks | CO3 (5 Marks) & CO4 (5 Marks) | Academic Year: 2024–2025</div>
+        </div>
+
+        <div style="background: rgba(13, 21, 39, 0.7); border: 1px solid var(--navy-border); padding: 14px; border-radius: 6px; margin-bottom: 20px;">
+          <h4 style="margin: 0 0 8px 0; color: var(--road-yellow-bright);">Student Group Details & Contribution Summary:</h4>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; font-size: 0.82rem;">
+            <div><strong>1. Rohan Sharma</strong><br><span style="color:var(--text-muted);">Roll: CE-2024-042</span><br>Problem Formulation & Dataset Engineering (IRC:82)</div>
+            <div><strong>2. Ananya Patel</strong><br><span style="color:var(--text-muted);">Roll: CE-2024-058</span><br>ML Model Development & Hyperparameter Tuning</div>
+            <div><strong>3. Aditya Deshmukh</strong><br><span style="color:var(--text-muted);">Roll: CE-2024-071</span><br>Evaluation, Web Dashboard & Viva Walkthrough</div>
+          </div>
+        </div>
+
+        <h3 style="color: var(--road-yellow-bright); border-bottom: 1px solid var(--navy-border); padding-bottom: 6px; margin-top: 24px;">
+          SECTION 1: QUESTION 1 COMPLIANCE (CO3 — 5 MARKS)
+        </h3>
+        <p><strong>1. Problem Statement:</strong> Bituminous highway and urban road pavements across India degrade non-linearly under heavy commercial vehicular axle loads (ESAL) and monsoon downpours. Traditional visual inspections are slow, subjective, and reactive. RoadVision AI builds a machine learning classification engine that maps 7 physical inspection parameters into actionable road health categories to enable predictive intervention before structural collapse occurs.</p>
+        
+        <p><strong>2. Dataset Source & Engineering Benchmarks:</strong> 120 usable road records generated according to Indian Roads Congress <strong>IRC:82-2015</strong> (<em>Maintenance of Bituminous Surfaces</em>) and World Bank <strong>HDM-4 IRI</strong> benchmarks across 10 Indian cities (Pune, Mumbai, Bengaluru, Delhi, Hyderabad, Chennai, Jaipur, Ahmedabad, Lucknow, Nagpur).</p>
+        
+        <p><strong>3. Input Variables & Units:</strong></p>
+        <ul style="padding-left: 20px; font-size: 0.85rem; margin-bottom: 12px;">
+          <li>International Roughness Index (IRI): m/km (Bump integrator / Laser profilometer)</li>
+          <li>Pothole Count: count per 500m segment (visual / grid count)</li>
+          <li>Crack Percentage: % surface area affected by fatigue/longitudinal cracking</li>
+          <li>Rutting Depth: mm under 3m straight-edge gauge</li>
+          <li>Pavement Surface Age: years elapsed since last bituminous overlay</li>
+          <li>Traffic Volume: Average Annual Daily Traffic (vehicles/day)</li>
+          <li>Drainage Condition: Categorical rating (Good, Moderate, Poor)</li>
+        </ul>
+
+        <p><strong>4. Expected Output:</strong> 4 condition categories defined by IRC:82: <code>Good</code> (Green, sound pavement), <code>Fair</code> (Yellow, preventative repair needed), <code>Poor</code> (Orange, rehabilitation/overlay needed), and <code>Very Poor</code> (Red, urgent reconstruction).</p>
+
+        <p><strong>5. Machine Learning Method Selection:</strong> <strong>Random Forest Classifier</strong> (100 trees, max depth 6). Combines ensemble bagging with random feature subspace sampling, partitions non-linear defect synergies, prevents overfitting, and outputs feature importances.</p>
+
+        <p><strong>6. Train/Test Split:</strong> Exactly <strong>80% Training (96 records)</strong> and <strong>20% Testing (24 records)</strong> using stratified sampling.</p>
+
+        <h3 style="color: var(--road-yellow-bright); border-bottom: 1px solid var(--navy-border); padding-bottom: 6px; margin-top: 28px;">
+          SECTION 2: QUESTION 2 COMPLIANCE (CO4 — 5 MARKS)
+        </h3>
+        <p><strong>1. Model Evaluation Metrics (Evaluated on Unseen 20% Test Partition):</strong></p>
+        <ul style="padding-left: 20px; font-size: 0.85rem; margin-bottom: 12px;">
+          <li><strong>Overall Test Accuracy:</strong> <strong>95.83%</strong> (23 out of 24 test segments classified correctly)</li>
+          <li><strong>Weighted Precision:</strong> <strong>96.43%</strong></li>
+          <li><strong>Weighted Recall:</strong> <strong>95.83%</strong></li>
+          <li><strong>Weighted F1-Score:</strong> <strong>95.80%</strong></li>
+        </ul>
+
+        <p><strong>2. Confusion Matrix (24 Test Samples):</strong></p>
+        <div style="font-family: var(--font-mono); font-size: 0.82rem; background: rgba(0,0,0,0.3); padding: 10px; border-radius: 4px; margin-bottom: 12px;">
+          Predicted: Good  Fair  Poor  Very Poor<br>
+          Actual Good:   6     0     0     0<br>
+          Actual Fair:   0     6     0     0<br>
+          Actual Poor:   0     1     5     0   (1 boundary sample IND-RD-135 classified Fair)<br>
+          Actual V.Poor: 0     0     0     6
+        </div>
+
+        <p><strong>3. Main Finding:</strong> Roughness Index (IRI at 25.58%) and Surface Crack Percentage (23.03%) account for 48.61% of the classification decision weight. Pavements enter structural distress rapidly when crack density exceeds 20% and IRI surpasses 5.5 m/km.</p>
+
+        <p><strong>4. One Limitation:</strong> The model relies strictly on visible functional surface parameters ($IRI$, cracks, rutting) and lacks non-destructive subsurface deflection data (such as Falling Weight Deflectometer or Benkelman Beam Deflection testing) to detect underlying subgrade moisture saturation.</p>
+
+        <p><strong>5. One Practical Civil Engineering Use:</strong> Municipal Pavement Management Systems (PMS). Municipalities (e.g. PMC, BMC, BBMP) can prioritize preventive maintenance on 'Fair' condition roads at ₹280/m² before they deteriorate into ₹2,400/m² structural reconstructions, saving up to 40% of annual road budgets.</p>
+      </div>
+      <div class="modal-footer">
+        <button id="btn-print-report" class="btn btn-secondary">
+          <i class="fas fa-print"></i> Print Report (PDF)
+        </button>
+        <button class="btn btn-primary" onclick="document.getElementById('btn-close-report').click();">
+          <i class="fas fa-times"></i> Close
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Runtime Scripts -->
+  <script src="rf_model.js"></script>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
